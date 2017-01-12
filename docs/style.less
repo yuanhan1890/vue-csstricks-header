@@ -1,0 +1,73 @@
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+
+.svg-line {
+    width: 100%;
+    height: 150px;
+}
+
+.content {
+    .header {
+        position: relative;
+        background: #eee;
+        min-height: 400px;
+
+        .svg-line {
+            position: absolute;
+            left: 0;
+        }
+
+        .svg-line.top {
+            top: 0px;
+        }
+
+        .svg-line.bottom {
+            bottom: 0px;
+        }
+    }
+
+    .body {
+
+    }
+
+    .footer {
+        position: relative;
+        min-height: 500px;
+        
+        &.newsletter {
+            background: linear-gradient(to bottom, #FBDA61, #F76B1C);    
+        }
+        
+        &.copyright {
+            background: linear-gradient(to bottom, rgb(250,203,111), #DBA0D2);
+        }
+
+        .svg-line {
+            position: absolute;
+            left: 0;
+        }
+
+        .svg-line.top {
+            top: 0px;
+        }
+        .svg-line.bottom {
+            bottom: 0px;
+        }
+
+    }
+}
