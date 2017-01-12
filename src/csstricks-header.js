@@ -1,27 +1,3 @@
-var _id = 0
-
-function divideRectangle(width, height, divPoints, wantBottom){
-    var midPoints = Array.apply(null, {length: divPoints}).reduce((ret, cur, index)=>{
-        var x = width * (index + Math.random()) / divPoints | 0
-        var y = height * (0.5 + (0.5 - Math.random()) * 0.5) | 0
-        ret.push('L', x, ',', y, ' ')
-        return ret
-    }, [])
-
-    if (!wantBottom) {
-        return [].concat(
-            ['M-4,-4 L-4,', height / 2 | 0, ' '],
-            midPoints,
-            [' L', width + 4, ',', height / 2 | 0, 'L', width + 4, ',-4 Z']
-        ).join('')
-    } else {
-        return [].concat(
-            ['M-4,', height + 4, ' L-4,', height / 2 | 0, ' '],
-            midPoints,
-            [' L', width + 4, ',', height / 2 | 0, ' L', width + 4, ',', height + 4, ' Z']
-        ).join('')    
-    }
-}
 
 export default {
     props: {
@@ -123,5 +99,30 @@ export default {
                 }
             })
         ])
+    }
+}
+
+var _id = 0
+
+function divideRectangle(width, height, divPoints, wantBottom){
+    var midPoints = Array.apply(null, {length: divPoints}).reduce((ret, cur, index)=>{
+        var x = width * (index + Math.random()) / divPoints | 0
+        var y = height * (0.5 + (0.5 - Math.random()) * 0.5) | 0
+        ret.push('L', x, ',', y, ' ')
+        return ret
+    }, [])
+
+    if (!wantBottom) {
+        return [].concat(
+            ['M-4,-4 L-4,', height / 2 | 0, ' '],
+            midPoints,
+            [' L', width + 4, ',', height / 2 | 0, 'L', width + 4, ',-4 Z']
+        ).join('')
+    } else {
+        return [].concat(
+            ['M-4,', height + 4, ' L-4,', height / 2 | 0, ' '],
+            midPoints,
+            [' L', width + 4, ',', height / 2 | 0, ' L', width + 4, ',', height + 4, ' Z']
+        ).join('')    
     }
 }

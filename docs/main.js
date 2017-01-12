@@ -10,6 +10,10 @@ new Vue({
 
         return <div class="content">
             <div class="header">
+                <div class="title">
+                    <h1>Vue Css-tricks Svg Animation</h1>
+                    <p>made by <a href="">yuanhan</a></p>
+                </div>
                 <CsstricksHeader classname="svg-line top" linecolor="white"></CsstricksHeader>
                 <CsstricksHeader 
                     classname="svg-line bottom" 
@@ -26,8 +30,8 @@ new Vue({
                 <CsstricksHeader 
                     classname="svg-line top" 
                     linecolor="white"
-                    topcolor="#eee"
-                    bottomcolor="#eee"
+                    topcolor="white"
+                    bottomcolor="#FFF1BA"
                 ></CsstricksHeader>
                 <CsstricksHeader
                     classname="svg-line bottom"

@@ -15,6 +15,10 @@ html {
     box-sizing: inherit;
 }
 
+p, h1, h2, a {
+    margin: 0px;
+    padding: 0px;
+}
 
 .svg-line {
     width: 100%;
@@ -38,6 +42,41 @@ html {
 
         .svg-line.bottom {
             bottom: 0px;
+        }
+
+        .title {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+            h1 {
+                font-family: 'CooperHewitt', sans-serif;
+                font-weight: 900;
+                font-size: 1.8rem;
+                line-height: 1.1;
+                color: #222;
+
+                margin-bottom: 1.2rem;
+            }
+
+            p {
+                float:right;
+
+                background: rgba(238,238,238,0.7);
+                box-shadow: 2px 2px 20px 5px rgba(238,238,238,0.7);
+                
+                font-family: 'Source Sans Pro', sans-serif;
+                line-height: 1.45;
+
+                a {
+                    color: #2793C7;
+                    text-decoration: none;
+                    font-weight: 700;
+
+                }
+            }
+
         }
     }
 
