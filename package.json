@@ -21,6 +21,7 @@
     "css-loader": "^0.26.1",
     "less": "^2.7.2",
     "less-loader": "^2.2.3",
+    "prismjs": "^1.6.0",
     "style-loader": "^0.13.1",
     "vue": "^2.1.8",
     "webpack": "beta",

@@ -1,11 +1,11 @@
 
 export default {
     props: {
-        linecolor: {
+        lineColor: {
             type: String,
             default: 'white'
         },
-        linewidth: {
+        lineWidth: {
             type: String,
             default: '4'
         },
@@ -13,11 +13,11 @@ export default {
             type: String,
             default: '1s'
         },
-        topcolor: {
+        topColor: {
             type: String,
             default: '#FBDA61'
         },
-        bottomcolor: {
+        bottomColor: {
             type: String,
             default: '#F76B1C'
         },
@@ -37,7 +37,7 @@ export default {
             type: Number,
             default: 5
         },
-        classname: {
+        className: {
             type: String,
             default: 'csstricks-header'
         }
@@ -58,7 +58,7 @@ export default {
     render(h){
         return h('svg', {
             attrs: {
-                class: this.classname,
+                class: this.className,
                 viewBox: `0 0 ${this.width} ${this.height}`,
                 preserveAspectRatio: 'none'
             }
@@ -74,21 +74,21 @@ export default {
                     h('stop', {
                         attrs: {
                             offset: '0%',
-                            'stop-color': this.topcolor
+                            'stop-color': this.topColor
                         }
                     }),
                     h('stop', {
                         attrs: {
                             offset: '100%',
-                            'stop-color': this.bottomcolor
+                            'stop-color': this.bottomColor
                         }
                     })
                 ])
               ]),
             h('path', {
                 style: {
-                    'stroke': this.linecolor,
-                    'stroke-width': this.linewidth,
+                    'stroke': this.lineColor,
+                    'stroke-width': this.lineWidth,
                     '-webkit-transition': this.anim,
                     'transition': this.anim
                 },
