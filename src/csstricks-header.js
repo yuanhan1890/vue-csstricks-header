@@ -40,6 +40,10 @@ export default {
         className: {
             type: String,
             default: 'csstricks-header'
+        },
+        interval: {
+            type: Number,
+            default: 3000
         }
     }, 
     data(){
@@ -53,7 +57,7 @@ export default {
     mounted(){
         setInterval(()=>{
             this.path = divideRectangle(this.width, this.height, this.points, this.flip)
-        }, 3000)
+        }, this.interval)
     },
     render(h){
         return h('svg', {

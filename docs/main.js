@@ -108,6 +108,11 @@ new Vue ({
                                     <td><span>csstricks-header</span></td>
                                     <td>Classname applied to svg element</td>
                                 </tr>
+                                <tr>
+                                    <td>interval</td>
+                                    <td><span>3000</span></td>
+                                    <td>Cycle in Interval(ms)</td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>

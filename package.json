@@ -6,7 +6,9 @@
   "author": "Yuan Han <yuanhan1890@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "webpack-dev-server --hot --inline --config webpack.dev.js"
+    "dev": "webpack-dev-server --hot --inline --config webpack.doc.js",
+    "build:src": "webpack --config webpack.build.js",
+    "build:doc": "NODE_ENV=production webpack --config webpack.doc.js"
   },
   "dependencies": {
     "babel-core": "^6.21.0",
@@ -19,12 +21,13 @@
     "babel-plugin-transform-vue-jsx": "^3.3.0",
     "babel-preset-stage-0": "^6.16.0",
     "css-loader": "^0.26.1",
+    "extract-text-webpack-plugin": "^2.0.0-beta.5",
     "less": "^2.7.2",
     "less-loader": "^2.2.3",
     "prismjs": "^1.6.0",
     "style-loader": "^0.13.1",
     "vue": "^2.1.8",
-    "webpack": "beta",
+    "webpack": "^2.2.0-rc.4",
     "webpack-dev-server": "beta"
   }
 }
